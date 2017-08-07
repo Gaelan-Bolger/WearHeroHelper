@@ -19,12 +19,6 @@ android {
     }
 }
 
-repositories {
-    maven {
-        url "http://dl.bintray.com/gaelan-bolger/maven"
-    }
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'

@@ -15,11 +15,6 @@ Include
 
 Wear Module
 ```groovy
-repositories {
-    maven {
-        url "http://dl.bintray.com/gaelan-bolger/maven"
-    }
-}
 dependencies {
 	compile 'day.cloudy.apps:wear-herohelper-common:0.0.1'
 	compile 'day.cloudy.apps:wear-herohelper-wearable:0.0.1'
@@ -28,11 +23,6 @@ dependencies {
 
 Mobile Module
 ```groovy
-repositories {
-    maven {
-        url "http://dl.bintray.com/gaelan-bolger/maven"
-    }
-}
 dependencies {
 	compile 'day.cloudy.apps:wear-herohelper-common:0.0.1'
 	compile 'day.cloudy.apps:wear-herohelper-companion:0.0.1'

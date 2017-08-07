@@ -18,12 +18,6 @@ android {
     }
 }
 
-repositories {
-    maven {
-        url "http://dl.bintray.com/gaelan-bolger/maven"
-    }
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:percent:' + versions.supportLibrary
