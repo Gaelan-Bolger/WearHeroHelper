@@ -3,6 +3,7 @@ WearHeroHelper
 [ ![Download](https://api.bintray.com/packages/gaelan-bolger/maven/day.cloudy.apps.wear-herohelper-common/images/download.svg) ](https://bintray.com/gaelan-bolger/maven/day.cloudy.apps.wear-herohelper-common/_latestVersion)
 
 Android library for displaying a wearable's hero image on a companion device.
+
 For more information check out [this Medium article][1] I wrote.
 
 ![](website/static/Screenshot_20170806-200540.png)
