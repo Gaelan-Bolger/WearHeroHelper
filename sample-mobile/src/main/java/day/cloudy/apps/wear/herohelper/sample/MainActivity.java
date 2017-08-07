@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 .addConnectionCallbacks(this)
                 .enableAutoManage(this, this)
                 .build();
+        mGoogleApiClient.connect();
     }
 
     @Override
