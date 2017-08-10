@@ -19,17 +19,12 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:percent:' + versions.supportLibrary
-    implementation 'com.android.support:support-v4:' + versions.supportLibrary
-    implementation 'com.android.support:recyclerview-v7:' + versions.supportLibrary
-    implementation 'com.android.support.constraint:constraint-layout:' + versions.constraintLayout
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation 'com.google.android.support:wearable:' + versions.supportWearable
-    compileOnly 'com.google.android.wearable:wearable:' + versions.supportWearable
+    implementation project(':wear-herohelper-common')
+    implementation project(':wear-herohelper-wearable')
 
-    implementation 'com.google.android.gms:play-services-wearable:' + versions.playServices
-
-    implementation 'day.cloudy.apps:wear-herohelper-common:' + versions.release
-    implementation 'day.cloudy.apps:wear-herohelper-wearable:' + versions.release
+    implementation deps.support.wearable
+    compileOnly deps.wearable
+    implementation deps.play.wearable
 }

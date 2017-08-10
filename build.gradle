@@ -5,19 +5,19 @@ buildscript {
 
 
     ext.versions = [
-            'minSdk'        : 18,
-            'compileSdk'    : 26,
-            'buildTools'    : '26.0.0',
+            'minSdk'          : 18,
+            'compileSdk'      : 26,
+            'buildTools'      : '26.0.0',
 
-            'androidPlugin' : '3.0.0-alpha9',
-            'androidTools'  : '26.0.0-alpha9',
-            'constraintLayout'  : '1.0.2',
-            'kotlin'        : '1.1.3-2',
-            'playServices': '11.0.4',
-            'supportLibrary': '26.0.0',
-            'supportWearable': '2.0.4',
+            'androidPlugin'   : '3.0.0-beta1',
 
-            'release'       : '0.0.1',
+            'kotlin'          : '1.1.3-2',
+            'constraintLayout': '1.0.2',
+            'supportLibrary'  : '26.0.1',
+            'supportWearable' : '2.0.4',
+            'playServices'    : '11.0.4',
+
+            'release'         : '0.0.2',
     ]
     ext.deps = [
             android  : [
@@ -25,12 +25,24 @@ buildscript {
                     'gradlePlugin': "com.android.tools.build:gradle:${versions.androidPlugin}",
             ],
             'support': [
-                    'compat'     : "com.android.support:support-compat:${versions.supportLibrary}",
-                    'annotations': "com.android.support:support-annotations:${versions.supportLibrary}",
-                    'test'       : [
-                            'runner': 'com.android.support.test:runner:1.0.0',
+                    'annotations' : "com.android.support:support-annotations:${versions.supportLibrary}",
+                    'v4'          : "com.android.support:support-v4:${versions.supportLibrary}",
+                    'appCompat'   : "com.android.support:appcompat-v7:${versions.supportLibrary}",
+                    'recyclerView': "com.android.support:recyclerview-v7:${versions.supportLibrary}",
+                    'design'      : "com.android.support:design:${versions.supportLibrary}",
+                    'percent'     : "com.android.support:percent:${versions.supportLibrary}",
+                    'constraint'  : "com.android.support.constraint:constraint-layout:${versions.constraintLayout}",
+                    'wearable'    : "com.google.android.support:wearable:${versions.supportWearable}",
+                    'test'        : [
+                            'runner'  : 'com.android.support.test:runner:1.0.0',
+                            'espresso': 'com.android.support.test.espresso:espresso-core:3.0.0',
                     ],
-            ]
+            ],
+            'play'   : [
+                    'wearable': "com.google.android.gms:play-services-wearable:${versions.playServices}"
+            ],
+            wearable : "com.google.android.wearable:wearable:${versions.supportWearable}",
+            junit    : 'junit:junit:4.12',
     ]
 
     repositories {

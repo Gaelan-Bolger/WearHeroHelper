@@ -16,16 +16,16 @@ Include
 Wear Module
 ```groovy
 dependencies {
-	compile 'day.cloudy.apps:wear-herohelper-common:0.0.1'
-	compile 'day.cloudy.apps:wear-herohelper-wearable:0.0.1'
+	compile 'day.cloudy.apps:wear-herohelper-common:0.0.2'
+	compile 'day.cloudy.apps:wear-herohelper-wearable:0.0.2'
 }
 ```
 
 Mobile Module
 ```groovy
 dependencies {
-	compile 'day.cloudy.apps:wear-herohelper-common:0.0.1'
-	compile 'day.cloudy.apps:wear-herohelper-companion:0.0.1'
+	compile 'day.cloudy.apps:wear-herohelper-common:0.0.2'
+	compile 'day.cloudy.apps:wear-herohelper-companion:0.0.2'
 }
 ```
 
@@ -35,16 +35,16 @@ Example
 	
 Wear Module
 ```java
-	// Put the hero image data so that the companion can access it,
-	// no-op if the data item already exists so safe to call every app start
-	HeroImageHelper.putHeroImageDataItem(this);
+// Put the hero image data so that the companion can access it,
+// no-op if the data item already exists so safe to call every app start
+HeroImageHelper.putHeroImageDataItem(this);
 ```
 
 Mobile Module
 ```java
-	// Load the hero image into an image view, utilizes a transition drawable
-	Drawable fallback = ContextCompat.getDrawable(this, R.drawable.default_hero);
-	HeroImageLoader.load(mGoogleApiClient, node.getId()).fallback(fallback).into(mHeroImage);
+// Load the hero image into an image view, utilizes a transition drawable
+Drawable fallback = ContextCompat.getDrawable(this, R.drawable.default_hero);
+HeroImageLoader.load(mGoogleApiClient, node.getId()).fallback(fallback).into(mHeroImage);
 ```
 
 Advanced

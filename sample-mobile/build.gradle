@@ -20,19 +20,18 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.0'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation deps.junit
+    androidTestImplementation deps.support.test.runner
+    androidTestImplementation deps.support.test.espresso
 
     wearApp project(':sample-wear')
 
-    implementation 'com.android.support:appcompat-v7:' + versions.supportLibrary
-    implementation 'com.android.support:design:' + versions.supportLibrary
-    implementation 'com.android.support.constraint:constraint-layout:' + versions.constraintLayout
+    implementation project(':wear-herohelper-common')
+    implementation project(':wear-herohelper-companion')
 
-    implementation 'com.google.android.gms:play-services-wearable:' + versions.playServices
-
-    implementation 'day.cloudy.apps:wear-herohelper-common:' + versions.release
-    implementation 'day.cloudy.apps:wear-herohelper-companion:' + versions.release
+    implementation deps.support.appCompat
+    implementation deps.support.recyclerView
+    implementation deps.support.design
+    implementation deps.play.wearable
 }
